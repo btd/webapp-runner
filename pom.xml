@@ -8,7 +8,7 @@
 
     <groupId>com.github.jsimone</groupId>
     <artifactId>webapp-runner</artifactId>
-    <version>7.0.40.1-SNAPSHOT</version>
+    <version>7.0.40.1</version>
 
 
     <name>webapp-runner</name>
@@ -58,7 +58,7 @@
         <source.plugin.version>2.1.2</source.plugin.version>
         <gpg.plugin.version>1.2</gpg.plugin.version>
         <javadoc.plugin.version>2.7</javadoc.plugin.version>
-        <tomcat.version>7.0.40</tomcat.version>
+        <tomcat.version>8.0.8</tomcat.version>
     </properties>
 
     <dependencies>
@@ -93,11 +93,6 @@
             <version>${tomcat.version}</version>
         </dependency>
         <dependency>
-            <groupId>ru.zinin</groupId>
-            <artifactId>tomcat-redis-session</artifactId>
-            <version>0.5</version>
-        </dependency>
-        <dependency>
             <groupId>com.beust</groupId>
             <artifactId>jcommander</artifactId>
             <version>1.27</version>
@@ -112,19 +107,6 @@
             <artifactId>testng</artifactId>
             <version>6.1.1</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>de.javakaffee.msm</groupId>
-            <artifactId>memcached-session-manager-tc7</artifactId>
-            <version>1.6.3</version>
-            <exclusions>
-                <!-- JDK 1.6 and above include StAX support by default, including StAX will cause
-                class incompatibility issues in 1.6+ -->
-                <exclusion>
-                    <groupId>stax</groupId>
-                    <artifactId>stax-api</artifactId>
-                </exclusion>
-            </exclusions>            
         </dependency>
     </dependencies>
     <build>
